@@ -1,0 +1,33 @@
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+{
+    "month" : "November",
+    "year" : 2012,
+    "dayCount" : 30,
+    "startDay" : 4,
+    "days" : [
+    {
+        "date" : 1,
+        "streams" : [
+        {
+            "id" : 1,
+            "account" : {
+                "id" : 2,
+                "accountName" : "mwd410",
+                "streams" : 5,
+                "comments" : 10,
+                "streamKarma" : 100,
+                "commentKarma" : 100
+            },
+            "time" : "00:00:00 GMT",
+            "expectedLength" : "01:00:00",
+            "daw" : "Ableton",
+            "genre" : "Dubstep"
+        }
+        ]
+    }
+    ]
+}

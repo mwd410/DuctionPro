@@ -1,0 +1,7 @@
+duction_pro_main_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: DuctionProMainBundle:Default:index }
+
+scheduleIndex:
+    pattern: /schedule
+    defaults: { _controller: DuctionProMainBundle:Schedule:scheduleindex }

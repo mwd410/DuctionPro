@@ -1,0 +1,43 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <link type="text/css" href="/DuctionPro/web/css/calendarSchedule.css" rel="stylesheet">
+    <script src="/DuctionPro/web/js/schedulePage.js"></script>
+    <script src="/DuctionPro/web/js/schedule.js"></script>
+{% endblock %}
+    
+{% block body %}
+    <div class="hidden">
+        <div id="streamTemplate" class="streamEvent"></div>
+        <div id="streamSpillTemplate" class="streamSpill"></div>
+    </div>
+    <div class="navbar navbar-inverse">
+    </div>
+    <div>
+        <div id="calendarHeader" class="calendarHeader center"></div>
+        <table id="calendar" class="calendar">
+            <thead>
+            {% for day in range(0,6) %}
+                <th id="weekDay_{{day}}" class="calendarWeekDay lightBorder"></th>
+            {% endfor %}
+            </thead>
+            <tbody>
+            {% for week in range(0,4) %}
+                <tr id="week_{{week}}" class="calendarWeek">
+                {% for day in range(0,6) %}
+                    <td id="week_{{week}}_day_{{day}}" class="calendarDay lightBorder">
+                        <div class="calendarDayHeader">&nbsp;</div>
+                        <div class="calendarDayBody"></div> 
+                    </td>
+                {% endfor%}
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,7 @@
+parameters:
+#    duction_pro_main.example.class: DuctionPro\MainBundle\Example
+
+services:
+#    duction_pro_main.example:
+#        class: %duction_pro_main.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
