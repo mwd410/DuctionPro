@@ -1,3 +1,35 @@
+DuctionPro Installation
+=======================
+
+1) Checkout the git repo to your root net directory on your server. Mine 
+is setup on XAMPP, so it goes in xampp/htdocs.
+
+2) Duplicate .../DuctionPro/app/config/parameters.yml.dist to parameters.yml, 
+which is ignored by the .gitignore in the root project directory. Edit the 
+database name, user, and password. Because parameters.yml is ignored, your 
+database password will not be shared with anybody. Also edit the secret.
+Ensure you do not screw up the indentation--even on empty lines. It must be
+4 spaces, NOT tab characters.
+
+3) Return to the .../DuctionPro directory in the command line. Run
+
+    php composer.phar install
+
+This will take a few minutes to install the various components.
+
+4) Next, run
+
+    php app/console cache:clear
+
+5) That should do it. Ensure Apache is running. You can go to
+
+    http://localhost/DuctionPro/web/app_dev.php
+
+To see that the Symfony app was installed correctly. 
+
+Any questions, please message reddit.com/u/mwd410
+
+
 Symfony Standard Edition
 ========================
 
